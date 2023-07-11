@@ -548,7 +548,7 @@ jnx_equities_pts_itch_v1_6_size_of.group = 4
 
 -- Display: Group
 jnx_equities_pts_itch_v1_6_display.group = function(value)
-  if value == "DAY" then
+  if value == "DAY " then
     return "Group: Daytime Market (DAY)"
   end
   if value == "NGHT" then

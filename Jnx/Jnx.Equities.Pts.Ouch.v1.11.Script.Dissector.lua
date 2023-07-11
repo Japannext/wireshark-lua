@@ -32,7 +32,7 @@ jnx_equities_pts_ouch_v1_11.fields.display = ProtoField.new("Display", "jnx.equi
 jnx_equities_pts_ouch_v1_11.fields.enter_order_message = ProtoField.new("Enter Order Message", "jnx.equities.pts.ouch.v1.11.enterordermessage", ftypes.STRING)
 jnx_equities_pts_ouch_v1_11.fields.executed_quantity = ProtoField.new("Executed Quantity", "jnx.equities.pts.ouch.v1.11.executedquantity", ftypes.UINT32)
 jnx_equities_pts_ouch_v1_11.fields.execution_price = ProtoField.new("Execution Price", "jnx.equities.pts.ouch.v1.11.executionprice", ftypes.UINT32)
-jnx_equities_pts_ouch_v1_11.fields.existing_order_token = ProtoField.new("Existing Order Token", "jnx.equities.pts.ouch.v1.11.existingordertoken", ftypes.STRING)
+jnx_equities_pts_ouch_v1_11.fields.existing_order_token = ProtoField.new("Existing Order Token", "jnx.equities.pts.ouch.v1.11.existingordertoken", ftypes.UINT32)
 jnx_equities_pts_ouch_v1_11.fields.firm_id = ProtoField.new("Firm Id", "jnx.equities.pts.ouch.v1.11.firmid", ftypes.UINT32)
 jnx_equities_pts_ouch_v1_11.fields.group = ProtoField.new("Group", "jnx.equities.pts.ouch.v1.11.group", ftypes.STRING)
 jnx_equities_pts_ouch_v1_11.fields.liquidity_indicator = ProtoField.new("Liquidity Indicator", "jnx.equities.pts.ouch.v1.11.liquidityindicator", ftypes.STRING)
@@ -54,7 +54,7 @@ jnx_equities_pts_ouch_v1_11.fields.order_rejected_message = ProtoField.new("Orde
 jnx_equities_pts_ouch_v1_11.fields.order_rejected_reason = ProtoField.new("Order Rejected Reason", "jnx.equities.pts.ouch.v1.11.orderrejectedreason", ftypes.STRING)
 jnx_equities_pts_ouch_v1_11.fields.order_replaced_message = ProtoField.new("Order Replaced Message", "jnx.equities.pts.ouch.v1.11.orderreplacedmessage", ftypes.STRING)
 jnx_equities_pts_ouch_v1_11.fields.order_state = ProtoField.new("Order State", "jnx.equities.pts.ouch.v1.11.orderstate", ftypes.STRING)
-jnx_equities_pts_ouch_v1_11.fields.order_token = ProtoField.new("Order Token", "jnx.equities.pts.ouch.v1.11.ordertoken", ftypes.STRING)
+jnx_equities_pts_ouch_v1_11.fields.order_token = ProtoField.new("Order Token", "jnx.equities.pts.ouch.v1.11.ordertoken", ftypes.UINT32)
 jnx_equities_pts_ouch_v1_11.fields.orderbook_id = ProtoField.new("Orderbook Id", "jnx.equities.pts.ouch.v1.11.orderbookid", ftypes.UINT32)
 jnx_equities_pts_ouch_v1_11.fields.packet = ProtoField.new("Packet", "jnx.equities.pts.ouch.v1.11.packet", ftypes.STRING)
 jnx_equities_pts_ouch_v1_11.fields.packet_header = ProtoField.new("Packet Header", "jnx.equities.pts.ouch.v1.11.packetheader", ftypes.STRING)
@@ -62,13 +62,13 @@ jnx_equities_pts_ouch_v1_11.fields.packet_length = ProtoField.new("Packet Length
 jnx_equities_pts_ouch_v1_11.fields.packet_type = ProtoField.new("Packet Type", "jnx.equities.pts.ouch.v1.11.packettype", ftypes.STRING)
 jnx_equities_pts_ouch_v1_11.fields.password = ProtoField.new("Password", "jnx.equities.pts.ouch.v1.11.password", ftypes.STRING)
 jnx_equities_pts_ouch_v1_11.fields.payload = ProtoField.new("Payload", "jnx.equities.pts.ouch.v1.11.payload", ftypes.STRING)
-jnx_equities_pts_ouch_v1_11.fields.previous_order_token = ProtoField.new("Previous Order Token", "jnx.equities.pts.ouch.v1.11.previousordertoken", ftypes.STRING)
+jnx_equities_pts_ouch_v1_11.fields.previous_order_token = ProtoField.new("Previous Order Token", "jnx.equities.pts.ouch.v1.11.previousordertoken", ftypes.UINT32)
 jnx_equities_pts_ouch_v1_11.fields.price = ProtoField.new("Price", "jnx.equities.pts.ouch.v1.11.price", ftypes.UINT32)
 jnx_equities_pts_ouch_v1_11.fields.quantity = ProtoField.new("Quantity", "jnx.equities.pts.ouch.v1.11.quantity", ftypes.UINT32)
 jnx_equities_pts_ouch_v1_11.fields.quantity_prevented_from_trading = ProtoField.new("Quantity Prevented From Trading", "jnx.equities.pts.ouch.v1.11.quantitypreventedfromtrading", ftypes.UINT32)
 jnx_equities_pts_ouch_v1_11.fields.reject_reason_code = ProtoField.new("Reject Reason Code", "jnx.equities.pts.ouch.v1.11.rejectreasoncode", ftypes.STRING)
 jnx_equities_pts_ouch_v1_11.fields.replace_order_message = ProtoField.new("Replace Order Message", "jnx.equities.pts.ouch.v1.11.replaceordermessage", ftypes.STRING)
-jnx_equities_pts_ouch_v1_11.fields.replacement_order_token = ProtoField.new("Replacement Order Token", "jnx.equities.pts.ouch.v1.11.replacementordertoken", ftypes.STRING)
+jnx_equities_pts_ouch_v1_11.fields.replacement_order_token = ProtoField.new("Replacement Order Token", "jnx.equities.pts.ouch.v1.11.replacementordertoken", ftypes.UINT32)
 jnx_equities_pts_ouch_v1_11.fields.requested_sequence_number = ProtoField.new("Requested Sequence Number", "jnx.equities.pts.ouch.v1.11.requestedsequencenumber", ftypes.STRING)
 jnx_equities_pts_ouch_v1_11.fields.requested_session = ProtoField.new("Requested Session", "jnx.equities.pts.ouch.v1.11.requestedsession", ftypes.STRING)
 jnx_equities_pts_ouch_v1_11.fields.sequence_number = ProtoField.new("Sequence Number", "jnx.equities.pts.ouch.v1.11.sequencenumber", ftypes.STRING)
@@ -318,7 +318,7 @@ end
 jnx_equities_pts_ouch_v1_11_dissect.order_token = function(buffer, offset, packet, parent)
   local length = jnx_equities_pts_ouch_v1_11_size_of.order_token
   local range = buffer(offset, length)
-  local value = range:string()
+  local value = range:uint()
   local display = jnx_equities_pts_ouch_v1_11_display.order_token(value, buffer, offset, packet, parent)
 
   parent:add(jnx_equities_pts_ouch_v1_11.fields.order_token, range, value, display)
@@ -371,7 +371,7 @@ jnx_equities_pts_ouch_v1_11_dissect.order_rejected_message_fields = function(buf
   -- Timestamp: 8 Byte Unsigned Fixed Width Integer
   index, timestamp = jnx_equities_pts_ouch_v1_11_dissect.timestamp(buffer, index, packet, parent)
 
-  -- Order Token: 4 Byte Ascii String
+  -- Order Token: 4 Byte Unsigned Fixed Width Integer
   index, order_token = jnx_equities_pts_ouch_v1_11_dissect.order_token(buffer, index, packet, parent)
 
   -- Order Rejected Reason: 1 Byte Ascii String Enum with 15 values
@@ -511,7 +511,7 @@ jnx_equities_pts_ouch_v1_11_dissect.order_executed_message_fields = function(buf
   -- Timestamp: 8 Byte Unsigned Fixed Width Integer
   index, timestamp = jnx_equities_pts_ouch_v1_11_dissect.timestamp(buffer, index, packet, parent)
 
-  -- Order Token: 4 Byte Ascii String
+  -- Order Token: 4 Byte Unsigned Fixed Width Integer
   index, order_token = jnx_equities_pts_ouch_v1_11_dissect.order_token(buffer, index, packet, parent)
 
   -- Executed Quantity: 4 Byte Unsigned Fixed Width Integer
@@ -684,7 +684,7 @@ jnx_equities_pts_ouch_v1_11_dissect.order_aiq_canceled_message_fields = function
   -- Timestamp: 8 Byte Unsigned Fixed Width Integer
   index, timestamp = jnx_equities_pts_ouch_v1_11_dissect.timestamp(buffer, index, packet, parent)
 
-  -- Order Token: 4 Byte Ascii String
+  -- Order Token: 4 Byte Unsigned Fixed Width Integer
   index, order_token = jnx_equities_pts_ouch_v1_11_dissect.order_token(buffer, index, packet, parent)
 
   -- Decrement Quantity: 4 Byte Unsigned Fixed Width Integer
@@ -745,7 +745,7 @@ jnx_equities_pts_ouch_v1_11_dissect.order_canceled_message_fields = function(buf
   -- Timestamp: 8 Byte Unsigned Fixed Width Integer
   index, timestamp = jnx_equities_pts_ouch_v1_11_dissect.timestamp(buffer, index, packet, parent)
 
-  -- Order Token: 4 Byte Ascii String
+  -- Order Token: 4 Byte Unsigned Fixed Width Integer
   index, order_token = jnx_equities_pts_ouch_v1_11_dissect.order_token(buffer, index, packet, parent)
 
   -- Decrement Quantity: 4 Byte Unsigned Fixed Width Integer
@@ -782,7 +782,7 @@ end
 jnx_equities_pts_ouch_v1_11_dissect.previous_order_token = function(buffer, offset, packet, parent)
   local length = jnx_equities_pts_ouch_v1_11_size_of.previous_order_token
   local range = buffer(offset, length)
-  local value = range:string()
+  local value = range:uint()
   local display = jnx_equities_pts_ouch_v1_11_display.previous_order_token(value, buffer, offset, packet, parent)
 
   parent:add(jnx_equities_pts_ouch_v1_11.fields.previous_order_token, range, value, display)
@@ -1046,7 +1046,7 @@ end
 jnx_equities_pts_ouch_v1_11_dissect.replacement_order_token = function(buffer, offset, packet, parent)
   local length = jnx_equities_pts_ouch_v1_11_size_of.replacement_order_token
   local range = buffer(offset, length)
-  local value = range:string()
+  local value = range:uint()
   local display = jnx_equities_pts_ouch_v1_11_display.replacement_order_token(value, buffer, offset, packet, parent)
 
   parent:add(jnx_equities_pts_ouch_v1_11.fields.replacement_order_token, range, value, display)
@@ -1099,7 +1099,7 @@ jnx_equities_pts_ouch_v1_11_dissect.order_replaced_message_fields = function(buf
   -- Timestamp: 8 Byte Unsigned Fixed Width Integer
   index, timestamp = jnx_equities_pts_ouch_v1_11_dissect.timestamp(buffer, index, packet, parent)
 
-  -- Replacement Order Token: 4 Byte Ascii String
+  -- Replacement Order Token: 4 Byte Unsigned Fixed Width Integer
   index, replacement_order_token = jnx_equities_pts_ouch_v1_11_dissect.replacement_order_token(buffer, index, packet, parent)
 
   -- Buy Sell Indicator: 1 Byte Ascii String Enum with 4 values
@@ -1132,7 +1132,7 @@ jnx_equities_pts_ouch_v1_11_dissect.order_replaced_message_fields = function(buf
   -- Order State: 1 Byte Ascii String Enum with 2 values
   index, order_state = jnx_equities_pts_ouch_v1_11_dissect.order_state(buffer, index, packet, parent)
 
-  -- Previous Order Token: 4 Byte Ascii String
+  -- Previous Order Token: 4 Byte Unsigned Fixed Width Integer
   index, previous_order_token = jnx_equities_pts_ouch_v1_11_dissect.previous_order_token(buffer, index, packet, parent)
 
   return index
@@ -1343,7 +1343,7 @@ jnx_equities_pts_ouch_v1_11_dissect.order_accepted_message_fields = function(buf
   -- Timestamp: 8 Byte Unsigned Fixed Width Integer
   index, timestamp = jnx_equities_pts_ouch_v1_11_dissect.timestamp(buffer, index, packet, parent)
 
-  -- Order Token: 4 Byte Ascii String
+  -- Order Token: 4 Byte Unsigned Fixed Width Integer
   index, order_token = jnx_equities_pts_ouch_v1_11_dissect.order_token(buffer, index, packet, parent)
 
   -- Client Reference: 10 Byte Ascii String
@@ -1496,7 +1496,7 @@ end
 jnx_equities_pts_ouch_v1_11_dissect.cancel_order_message_fields = function(buffer, offset, packet, parent)
   local index = offset
 
-  -- Order Token: 4 Byte Ascii String
+  -- Order Token: 4 Byte Unsigned Fixed Width Integer
   index, order_token = jnx_equities_pts_ouch_v1_11_dissect.order_token(buffer, index, packet, parent)
 
   -- Quantity: 4 Byte Unsigned Fixed Width Integer
@@ -1530,7 +1530,7 @@ end
 jnx_equities_pts_ouch_v1_11_dissect.existing_order_token = function(buffer, offset, packet, parent)
   local length = jnx_equities_pts_ouch_v1_11_size_of.existing_order_token
   local range = buffer(offset, length)
-  local value = range:string()
+  local value = range:uint()
   local display = jnx_equities_pts_ouch_v1_11_display.existing_order_token(value, buffer, offset, packet, parent)
 
   parent:add(jnx_equities_pts_ouch_v1_11.fields.existing_order_token, range, value, display)
@@ -1568,10 +1568,10 @@ end
 jnx_equities_pts_ouch_v1_11_dissect.replace_order_message_fields = function(buffer, offset, packet, parent)
   local index = offset
 
-  -- Existing Order Token: 4 Byte Ascii String
+  -- Existing Order Token: 4 Byte Unsigned Fixed Width Integer
   index, existing_order_token = jnx_equities_pts_ouch_v1_11_dissect.existing_order_token(buffer, index, packet, parent)
 
-  -- Replacement Order Token: 4 Byte Ascii String
+  -- Replacement Order Token: 4 Byte Unsigned Fixed Width Integer
   index, replacement_order_token = jnx_equities_pts_ouch_v1_11_dissect.replacement_order_token(buffer, index, packet, parent)
 
   -- Quantity: 4 Byte Unsigned Fixed Width Integer
@@ -1649,7 +1649,7 @@ end
 jnx_equities_pts_ouch_v1_11_dissect.enter_order_message_fields = function(buffer, offset, packet, parent)
   local index = offset
 
-  -- Order Token: 4 Byte Ascii String
+  -- Order Token: 4 Byte Unsigned Fixed Width Integer
   index, order_token = jnx_equities_pts_ouch_v1_11_dissect.order_token(buffer, index, packet, parent)
 
   -- Client Reference: 10 Byte Ascii String

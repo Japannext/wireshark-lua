@@ -866,6 +866,10 @@ jnx_equities_pts_ouch_v1_11_display.display = function(value)
     return "Display: Postonly (P)"
   end
 
+  if value == " " then
+    return "Display: Unused"
+  end
+
   return "Display: Unknown("..value..")"
 end
 

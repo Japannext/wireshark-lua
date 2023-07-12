@@ -1713,45 +1713,52 @@ end
 
 -- Calculate runtime size of: Data
 jnx_equities_pts_ouch_v1_11_size_of.data = function(buffer, offset, message_type)
-  -- Size of Enter Order Message
-  if message_type == "O" then
-    return jnx_equities_pts_ouch_v1_11_size_of.enter_order_message(buffer, offset)
+  -- Dependency element: Packet Type
+  local packet_type = buffer(offset - 2, 1):string()
+  if packet_type == "U" then
+    -- Size of Enter Order Message
+    if message_type == "O" then
+      return jnx_equities_pts_ouch_v1_11_size_of.enter_order_message(buffer, offset)
+    end
+    -- Size of Replace Order Message
+    if message_type == "U" then
+      return jnx_equities_pts_ouch_v1_11_size_of.replace_order_message(buffer, offset)
+    end
+    -- Size of Cancel Order Message
+    if message_type == "X" then
+      return jnx_equities_pts_ouch_v1_11_size_of.cancel_order_message(buffer, offset)
+    end
   end
-  -- Size of Replace Order Message
-  if message_type == "U" then
-    return jnx_equities_pts_ouch_v1_11_size_of.replace_order_message(buffer, offset)
-  end
-  -- Size of Cancel Order Message
-  if message_type == "X" then
-    return jnx_equities_pts_ouch_v1_11_size_of.cancel_order_message(buffer, offset)
-  end
-  -- Size of System Event Message
-  if message_type == "S" then
-    return jnx_equities_pts_ouch_v1_11_size_of.system_event_message(buffer, offset)
-  end
-  -- Size of Order Accepted Message
-  if message_type == "A" then
-    return jnx_equities_pts_ouch_v1_11_size_of.order_accepted_message(buffer, offset)
-  end
-  -- Size of Order Replaced Message
-  if message_type == "U" then
-    return jnx_equities_pts_ouch_v1_11_size_of.order_replaced_message(buffer, offset)
-  end
-  -- Size of Order Canceled Message
-  if message_type == "C" then
-    return jnx_equities_pts_ouch_v1_11_size_of.order_canceled_message(buffer, offset)
-  end
-  -- Size of Order Aiq Canceled Message
-  if message_type == "D" then
-    return jnx_equities_pts_ouch_v1_11_size_of.order_aiq_canceled_message(buffer, offset)
-  end
-  -- Size of Order Executed Message
-  if message_type == "E" then
-    return jnx_equities_pts_ouch_v1_11_size_of.order_executed_message(buffer, offset)
-  end
-  -- Size of Order Rejected Message
-  if message_type == "J" then
-    return jnx_equities_pts_ouch_v1_11_size_of.order_rejected_message(buffer, offset)
+
+  if packet_type == "S" then
+    -- Size of System Event Message
+    if message_type == "S" then
+      return jnx_equities_pts_ouch_v1_11_size_of.system_event_message(buffer, offset)
+    end
+    -- Size of Order Accepted Message
+    if message_type == "A" then
+      return jnx_equities_pts_ouch_v1_11_size_of.order_accepted_message(buffer, offset)
+    end
+    -- Size of Order Replaced Message
+    if message_type == "U" then
+      return jnx_equities_pts_ouch_v1_11_size_of.order_replaced_message(buffer, offset)
+    end
+    -- Size of Order Canceled Message
+    if message_type == "C" then
+      return jnx_equities_pts_ouch_v1_11_size_of.order_canceled_message(buffer, offset)
+    end
+    -- Size of Order Aiq Canceled Message
+    if message_type == "D" then
+      return jnx_equities_pts_ouch_v1_11_size_of.order_aiq_canceled_message(buffer, offset)
+    end
+    -- Size of Order Executed Message
+    if message_type == "E" then
+      return jnx_equities_pts_ouch_v1_11_size_of.order_executed_message(buffer, offset)
+    end
+    -- Size of Order Rejected Message
+    if message_type == "J" then
+      return jnx_equities_pts_ouch_v1_11_size_of.order_rejected_message(buffer, offset)
+    end
   end
 
   return 0
@@ -1764,45 +1771,51 @@ end
 
 -- Dissect Branches: Data
 jnx_equities_pts_ouch_v1_11_dissect.data_branches = function(buffer, offset, packet, parent, message_type)
-  -- Dissect Enter Order Message
-  if message_type == "O" then
-    return jnx_equities_pts_ouch_v1_11_dissect.enter_order_message(buffer, offset, packet, parent)
+  -- Dependency element: Packet Type
+  local packet_type = buffer(offset - 2, 1):string()
+  if packet_type == "U" then
+    -- Dissect Enter Order Message
+    if message_type == "O" then
+      return jnx_equities_pts_ouch_v1_11_dissect.enter_order_message(buffer, offset, packet, parent)
+    end
+    -- Dissect Replace Order Message
+    if message_type == "U" then
+      return jnx_equities_pts_ouch_v1_11_dissect.replace_order_message(buffer, offset, packet, parent)
+    end
+    -- Dissect Cancel Order Message
+    if message_type == "X" then
+      return jnx_equities_pts_ouch_v1_11_dissect.cancel_order_message(buffer, offset, packet, parent)
+    end
   end
-  -- Dissect Replace Order Message
-  if message_type == "U" then
-    return jnx_equities_pts_ouch_v1_11_dissect.replace_order_message(buffer, offset, packet, parent)
-  end
-  -- Dissect Cancel Order Message
-  if message_type == "X" then
-    return jnx_equities_pts_ouch_v1_11_dissect.cancel_order_message(buffer, offset, packet, parent)
-  end
-  -- Dissect System Event Message
-  if message_type == "S" then
-    return jnx_equities_pts_ouch_v1_11_dissect.system_event_message(buffer, offset, packet, parent)
-  end
-  -- Dissect Order Accepted Message
-  if message_type == "A" then
-    return jnx_equities_pts_ouch_v1_11_dissect.order_accepted_message(buffer, offset, packet, parent)
-  end
-  -- Dissect Order Replaced Message
-  if message_type == "U" then
-    return jnx_equities_pts_ouch_v1_11_dissect.order_replaced_message(buffer, offset, packet, parent)
-  end
-  -- Dissect Order Canceled Message
-  if message_type == "C" then
-    return jnx_equities_pts_ouch_v1_11_dissect.order_canceled_message(buffer, offset, packet, parent)
-  end
-  -- Dissect Order Aiq Canceled Message
-  if message_type == "D" then
-    return jnx_equities_pts_ouch_v1_11_dissect.order_aiq_canceled_message(buffer, offset, packet, parent)
-  end
-  -- Dissect Order Executed Message
-  if message_type == "E" then
-    return jnx_equities_pts_ouch_v1_11_dissect.order_executed_message(buffer, offset, packet, parent)
-  end
-  -- Dissect Order Rejected Message
-  if message_type == "J" then
-    return jnx_equities_pts_ouch_v1_11_dissect.order_rejected_message(buffer, offset, packet, parent)
+  if packet_type == "S" then
+    -- Dissect System Event Message
+    if message_type == "S" then
+      return jnx_equities_pts_ouch_v1_11_dissect.system_event_message(buffer, offset, packet, parent)
+    end
+    -- Dissect Order Accepted Message
+    if message_type == "A" then
+      return jnx_equities_pts_ouch_v1_11_dissect.order_accepted_message(buffer, offset, packet, parent)
+    end
+    -- Dissect Order Replaced Message
+    if message_type == "U" then
+      return jnx_equities_pts_ouch_v1_11_dissect.order_replaced_message(buffer, offset, packet, parent)
+    end
+    -- Dissect Order Canceled Message
+    if message_type == "C" then
+      return jnx_equities_pts_ouch_v1_11_dissect.order_canceled_message(buffer, offset, packet, parent)
+    end
+    -- Dissect Order Aiq Canceled Message
+    if message_type == "D" then
+      return jnx_equities_pts_ouch_v1_11_dissect.order_aiq_canceled_message(buffer, offset, packet, parent)
+    end
+    -- Dissect Order Executed Message
+    if message_type == "E" then
+      return jnx_equities_pts_ouch_v1_11_dissect.order_executed_message(buffer, offset, packet, parent)
+    end
+    -- Dissect Order Rejected Message
+    if message_type == "J" then
+      return jnx_equities_pts_ouch_v1_11_dissect.order_rejected_message(buffer, offset, packet, parent)
+    end
   end
 
   return offset
@@ -1832,36 +1845,42 @@ end
 jnx_equities_pts_ouch_v1_11_size_of.message_type = 1
 
 -- Display: Message Type
-jnx_equities_pts_ouch_v1_11_display.message_type = function(value)
-  if value == "O" then
-    return "Message Type: Enter Order Message (O)"
+jnx_equities_pts_ouch_v1_11_display.message_type = function(value, buffer, offset, packet, parent)
+  -- Dependency element: Packet Type
+  local packet_type = buffer(offset - 1, 1):string()
+  if packet_type == "U" then
+    if value == "O" then
+      return "Message Type: Enter Order Message (O)"
+    end
+    if value == "U" then
+      return "Message Type: Replace Order Message (U)"
+    end
+    if value == "X" then
+      return "Message Type: Cancel Order Message (X)"
+    end
   end
-  if value == "U" then
-    return "Message Type: Replace Order Message (U)"
-  end
-  if value == "X" then
-    return "Message Type: Cancel Order Message (X)"
-  end
-  if value == "S" then
-    return "Message Type: System Event Message (S)"
-  end
-  if value == "A" then
-    return "Message Type: Order Accepted Message (A)"
-  end
-  if value == "U" then
-    return "Message Type: Order Replaced Message (U)"
-  end
-  if value == "C" then
-    return "Message Type: Order Canceled Message (C)"
-  end
-  if value == "D" then
-    return "Message Type: Order Aiq Canceled Message (D)"
-  end
-  if value == "E" then
-    return "Message Type: Order Executed Message (E)"
-  end
-  if value == "J" then
-    return "Message Type: Order Rejected Message (J)"
+  if packet_type == "S" then
+    if value == "S" then
+      return "Message Type: System Event Message (S)"
+    end
+    if value == "A" then
+      return "Message Type: Order Accepted Message (A)"
+    end
+    if value == "U" then
+      return "Message Type: Order Replaced Message (U)"
+    end
+    if value == "C" then
+      return "Message Type: Order Canceled Message (C)"
+    end
+    if value == "D" then
+      return "Message Type: Order Aiq Canceled Message (D)"
+    end
+    if value == "E" then
+      return "Message Type: Order Executed Message (E)"
+    end
+    if value == "J" then
+      return "Message Type: Order Rejected Message (J)"
+    end
   end
 
   return "Message Type: Unknown("..value..")"
